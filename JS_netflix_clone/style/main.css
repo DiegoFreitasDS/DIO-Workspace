@@ -11,16 +11,18 @@
     box-sizing: 0;
 }
 
+/*elemento base*/
 body {
     background: var(--preto);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Arial", Times, serif;
+    color: white;
 }
 
 header .container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between66;
+    justify-content: space-between;
 }
 
 header .logo {
@@ -36,7 +38,73 @@ header nav a {
     margin-right:  10px;
 }
 
-/*altera cor do link quando o mouse passa em cima */
+/*quando o mouse passa em cima, altera cor do link  */
 header nav a:hover {
     color: #fff;
+}
+
+/*Filme principal*/
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)),url('/img/capa.jpg');
+
+    height: 400px; /*tamanho do container*/
+    background-size: cover; /*area de cobertura do container*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    /* ajusta valores internos do block | Um valor - refere as 4 posições / DOIS valores - primeiro cima e baixo, segundo lado. | mais valores sempre definidos no sentido horário */
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-top: 10px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 10px;
 }
